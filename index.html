@@ -521,9 +521,9 @@
     /* ═══ PRICING ═══ */
     .price-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      max-width: 820px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 1040px;
       margin: 0 auto
     }
 
@@ -531,7 +531,7 @@
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: 20px;
-      padding: 44px 36px;
+      padding: 44px 28px;
       position: relative;
       transition: all .3s;
       overflow: hidden
@@ -702,7 +702,7 @@
       opacity: .7
     }
 
-    @media(max-width:768px) {
+    @media(max-width:960px) {
       .price-grid {
         grid-template-columns: 1fr;
         max-width: 420px
@@ -1195,20 +1195,20 @@
         <h2 class="sec-title">プラン</h2>
       </div>
       <div class="price-grid">
-        <!-- ベーシックプラン -->
+        <!-- ライトプラン -->
         <div class="price-card reveal">
-          <div class="price-name">ベーシックプラン</div>
-          <div class="price-amount"><span class="yen">¥</span>398,000</div>
+          <div class="price-name">ライトプラン</div>
+          <div class="price-amount"><span class="yen">¥</span>298,000</div>
           <p class="price-tax">（税込）</p>
           <p class="price-period">サービス提供期間：12ヶ月間</p>
-          <p class="price-desc">Threads×AIの基礎から実践力を身につけたい方に。</p>
+          <p class="price-desc">教材とコミュニティを活用して、基礎から始めたい方に。</p>
           <ul class="price-features">
-            <li>12ヶ月コンテンツ閲覧権</li>
-            <li>12ヶ月コミュニティ参加権</li>
-            <li>期間内チャットサポート</li>
-            <li>月1回のZoomコンサル</li>
-            <li>各種テンプレートの使用権</li>
-            <li>初回ロードマップ作成</li>
+            <li>教材閲覧権（12ヶ月）</li>
+            <li>コミュニティ参加権</li>
+            <li>Discordでの投稿添削</li>
+            <li>グループコンサル参加</li>
+            <li>オフ会参加権</li>
+            <li>ナレッジ使用可能</li>
           </ul>
         </div>
         <!-- マスタープラン -->
@@ -1218,16 +1218,31 @@
           <div class="price-amount"><span class="yen">¥</span>498,000</div>
           <p class="price-tax">（税込）</p>
           <p class="price-period">サービス提供期間：12ヶ月間</p>
-          <p class="price-desc">個別サポートで確実に成果を出したい方に。</p>
+          <p class="price-desc">個別相談で方向性を確認し、ローンチ設計まで進めたい方に。</p>
           <ul class="price-features">
-            <li>12ヶ月コンテンツ閲覧権</li>
-            <li>12ヶ月コミュニティ参加権</li>
-            <li>期間内無制限のチャットサポート</li>
-            <li>無制限のZoomコンサル</li>
-            <li>追加コンテンツ閲覧権</li>
-            <li>各種テンプレートの使用権</li>
-            <li>初回ロードマップ作成</li>
-            <li>オフ会参加権</li>
+            <li>ライトプランのすべての内容</li>
+            <li>公式LINEでの相談</li>
+            <li>月1回のZoom相談</li>
+            <li>ローンチ設計</li>
+            <li>AI自動化の相談</li>
+          </ul>
+        </div>
+        <!-- 個別VIPプラン -->
+        <div class="price-card reveal d2">
+          <div class="price-name">個別VIPプラン</div>
+          <div class="price-amount"><span class="yen">¥</span>750,000</div>
+          <p class="price-tax">（税込）</p>
+          <p class="price-period">サービス提供期間：12ヶ月間</p>
+          <p class="price-desc">個別で密にサポートしてほしい方に。</p>
+          <ul class="price-features">
+            <li>ライトプランのすべての内容</li>
+            <li>公式LINEでの相談</li>
+            <li>ローンチ設計</li>
+            <li>AI自動化の相談</li>
+            <li>回数無制限のZoom相談</li>
+            <li>商品・LP・LINEシナリオの添削</li>
+            <li>運用代行案件を優先的に案内</li>
+            <li>ローンチ時も積極的に拡散</li>
           </ul>
         </div>
       </div>
@@ -1244,12 +1259,16 @@
           </thead>
           <tbody>
             <tr>
-              <td>ベーシックプラン</td>
-              <td><strong>398,000円</strong></td>
+              <td>ライトプラン</td>
+              <td><strong>298,000円</strong></td>
             </tr>
             <tr>
               <td>マスタープラン</td>
               <td><strong>498,000円</strong></td>
+            </tr>
+            <tr>
+              <td>個別VIPプラン</td>
+              <td><strong>750,000円</strong></td>
             </tr>
           </tbody>
         </table>
@@ -1359,12 +1378,16 @@
       <h3 class="legal-subtitle">■ 販売商品・価格一覧</h3>
       <table class="legal-table">
         <tr>
-          <th>ベーシックプラン</th>
-          <td>398,000円（税込）</td>
+          <th>ライトプラン</th>
+          <td>298,000円（税込）</td>
         </tr>
         <tr>
           <th>マスタープラン</th>
           <td>498,000円（税込）</td>
+        </tr>
+        <tr>
+          <th>個別VIPプラン</th>
+          <td>750,000円（税込）</td>
         </tr>
       </table>
 
@@ -1372,7 +1395,7 @@
       <table class="legal-table">
         <tr>
           <th>役務提供期間</th>
-          <td>ベーシックプラン：12ヶ月<br>マスタープラン：12ヶ月</td>
+          <td>ライトプラン：12ヶ月<br>マスタープラン：12ヶ月<br>個別VIPプラン：12ヶ月</td>
         </tr>
         <tr>
           <th>商品代金以外に必要な料金</th>
